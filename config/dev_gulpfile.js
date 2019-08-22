@@ -71,13 +71,13 @@ function webSrever(){
                         "^/sapi":'' //替换为空
                     }
                 }),
-                // proxy('/hot',{
-                //     target : 'https://api3.vipbcw.com/site/indexModuleData',
-                //     changeOrigin : true,
-                //     pathRewrite:{
-                //         "^/hot":''
-                //     }
-                // })
+                proxy('/submit',{
+                    target : 'http://localhost:3000/api/user/isSignin',
+                    changeOrigin : true,
+                    pathRewrite:{
+                        "^/submit":''
+                    }
+                })
             ]
         }
     })

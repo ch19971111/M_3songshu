@@ -40,6 +40,7 @@ class IndexController{
     renderMain(controller){
         $("main").html("<img id='layz' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565276100052&di=0b144fdf380706b81fc7bb4efb41ada5&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F5ac0d375bfb83e892b4884bb1d7e5046d223da2d2bd08-LrjhBO_fw658'/>");
         $(".container>#recommend").remove()
+
         controller.render()
     }
     bindTabbarEvent(){
