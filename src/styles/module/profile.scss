@@ -1,0 +1,250 @@
+.profile{
+    height: 100%;
+    width: 100%;
+    background-color: #f5f5f5;
+    overflow: hidden;
+    .better-scroll{
+        .card{
+            width: 100%;
+            height: 2.695rem;
+            position: relative;
+            text-align: center;
+            vertical-align: baseline;
+            padding-top: 1px ;
+            .bg-img{
+                position: absolute;
+                top: -.2rem;
+                bottom: 0;
+                min-width: 100%;
+                background-image: url(http://m.3songshu.com/resources/images/user-bg.781439ad.jpg);
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                z-index: 1;
+            }
+            .user-content{
+                position: relative;
+                width: 100%;
+                z-index: 10;
+                .user-avatar{
+                    width: .7rem;
+                    height: .7rem;
+                    margin: 60px auto 0;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        z-index: 10;    
+                    }
+                }
+                .user-namebar{
+                    color: #fff;
+                    .user-pho{
+                        margin-top: .08rem;
+                        font-size: .16rem;
+                        line-height: 1em;
+                    }
+                    .ng-binding{
+                        margin-top: .09rem;
+                        >.yo-ico{
+                            font-size: .2rem;
+                        }
+                    }
+                }
+            }
+            .user-button{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                display: flex;
+                background-color: rgba(0,0,0,.22);
+                z-index: 2;
+                >div{
+                    flex: 1;
+                    height: .5rem;
+                    padding: 6px 0;
+                    font-size: .15rem;
+                    color: #fff;
+                    position: relative;
+                    line-height: 1.3em;
+                    &.u-b-left{
+                        &::before{
+                            background: center left/1px 100% no-repeat linear-gradient(90deg,#fff,#fff 50%,transparent 50%);
+                            background-color: transparent;
+                            position: absolute;
+                            right: 0;
+                            top: 15%;
+                            width: 1px;
+                            height: 70%;
+                            content: ' ';
+                            opacity: .5;
+                            background-color: #fff;
+                        }
+                    }
+                    &.u-b-right{
+                        i{
+                            background: url(http://m.3songshu.com/resources/images/icon-nut-white@2x.844b41a5.png) no-repeat center;
+                            background-size: 13px auto;
+                            display: inline-block;
+                            width: 13px;
+                            height: 13px;
+                            vertical-align: baseline;
+                        }
+                        span{
+                            vertical-align: baseline;
+                        }
+                    }
+                }
+            }
+    
+        }
+        .order{
+            margin-bottom: .05rem;
+            margin-top:    .05rem;
+            font-size: .16rem;
+            background-color: #fff; 
+            li:first-child{
+                margin-left: .1rem;
+                position: relative;
+                padding: .1rem .34rem;
+                @include border( 0 0 1px 0 );
+                div{
+                    height: .24rem;
+                    .icon-l{
+                        position: absolute;
+                        display: inline-block;
+                        background: url(http://m.3songshu.com/resources/images/icon-button-order@2x.94521605.png) no-repeat center;
+                        background-size: 22px auto;
+                        width: 22px;
+                        height: .44rem;
+                        left: 0;
+                        top: 0;
+                    }
+                    span{
+                        font-size: .16rem;
+                        &.all-order{
+                            color: #999;
+                            height: 100%;
+                            position: absolute;
+                            right: .32rem;
+                            font-size: .15rem;
+                        }
+                    }
+                    >.yo-ico{
+                        position: absolute;
+                        right: 0;
+                        top: .02rem;
+                        font-size: .25rem;
+                    }
+                }
+            }
+            li:last-child{
+                padding: .1rem;
+                display: flex;
+                height: .68rem;
+                a{
+                    flex: 1;
+                    position: relative;
+                    color: #999;  
+                    font-size: .15rem;
+                    height: 2em;
+                    text-align: center;
+                    i{
+                        width: 100%;
+                        height: 2em;
+                        display: block;
+                        &.pending-1{
+                            background: url(http://m.3songshu.com/resources/images/icon-pending-payment@2x.0f90cd10.png) no-repeat center;
+                            background-size: .24rem;
+                        }
+                        &.pending-2{
+                            background: url(http://m.3songshu.com/resources/images/icon-to-be-shipped@2x.fda0a33e.png) no-repeat center;
+                            background-size: .24rem;
+                        }
+                        &.pending-3{
+                            background: url(http://m.3songshu.com/resources/images/icon-inbound@2x.6a1cc077.png) no-repeat center;
+                            background-size: .24rem;
+                        }
+                        &.pending-4{
+                            background: url(http://m.3songshu.com/resources/images/icon-need-remark@2x.da9440cf.png) no-repeat center;
+                            background-size: .24rem;
+                        }
+                        &.pending-5{
+                            background: url(http://m.3songshu.com/resources/images/icon-after-sale@2x.2f785614.png) no-repeat center;
+                            background-size: .24rem;
+                        }
+                    }
+                }
+            } 
+        }
+        .ul{
+            margin-bottom: .05rem;
+            margin-top: .05rem;
+            position: relative;
+            background-color: #fff;
+            color: #262626;
+            li{
+                div{
+                    @include border(0 0 1px 0);
+                    display: block;
+                    box-sizing: content-box;
+                    position: relative;
+                    margin: 0 0 0 10px;
+                    padding: 10px 34px;
+                    height: 1.5em;
+                    line-height: 1.5em;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    font-size: .16rem;
+                    .ico-l{
+                        background-image: url(http://m.3songshu.com/resources/images/icon-button-coupons@2x.ebeebeeb.png);
+                        background-size: 22px auto;
+                        width: 22px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        display: flex;
+                        position: absolute;
+                        top:  0;
+                        left: 0;
+                        height: 100%;
+                        &.recommend{
+                            background-image: url(http://m.3songshu.com/resources/images/icon-button-recommended@2x.fe5b1976.png);
+                        }
+                        &.service{
+                            background-image: url(http://m.3songshu.com/resources/images/icon-button-service@2x.6e3737ce.png);
+                        }
+                        &.help{
+                            background-image: url(http://m.3songshu.com/resources/images/icon-button-help@2x.bdd2505d.png);
+                        }
+                        &.setting{
+                            background-image: url(http://m.3songshu.com/resources/images/icon-button-setting@2x.ba292163.png);
+                        }
+                    }
+                    .item-txts{
+                        height: 100%;
+                        font-size: .16rem;
+                        float: left;
+                    }
+                    .item-tips{
+                        color: #999;
+                        height: 100%;
+                        font-size: 15px;
+                        float: right;
+                    }
+                    .ico-r{
+                        top: .1rem;
+                        right: 0;
+                        color: #999;
+                        width: 32px;
+                        text-align: center;
+                        position: absolute;
+                        font-size: .25rem;
+                    }
+                }
+            }
+        }
+    } 
+}

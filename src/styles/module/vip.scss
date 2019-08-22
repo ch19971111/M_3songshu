@@ -1,0 +1,202 @@
+.vip{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    >header{
+        height: .44rem;
+        background-color: #fff;
+        >div{
+            font-size: .17rem;
+            line-height: .44rem;
+            text-align: center;
+            height: 100%;
+            @include border( 0 0 1px 0);
+        }
+
+    }
+    .better-scroll{
+        overflow: hidden;
+        .vip-container{
+            flex: 1;
+            .user-content{
+                position: relative;
+                padding: .15rem  0 .1rem ;
+                background-color:#fff;
+                @include border(0 0 1px 0);
+                .user-title{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .user-t-txt{
+                        font-size: .14rem;
+                        line-height: 2em;
+                        display: block;
+                        color: #262626;;
+                    }
+                    .user-number{
+                        position: relative;
+                        display: inline-block;
+                        font-size: .35rem;
+                        padding-bottom: .27rem;
+                        color: #ff9601;
+                        &::after{
+                            position: absolute;
+                            background-color: #757575;
+                            top: 78%;
+                            height: .03rem;
+                            right: -.1rem;
+                            bottom: 0;
+                            left: -.1rem;
+                            border-radius: 50%;
+                            content: '';
+                            filter: blur(3px);
+                            opacity: .4;
+                        }
+                    }
+                }
+                .login-box{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    >p{
+                        font-size: .12rem;
+                        color: #262626;
+                    }
+                    >.button{
+                        width: .96rem;
+                        height: .3rem;
+                        font-size: .15rem;
+                        background-color:#77bc1f;
+                        color: #fff;
+                        border: none;
+                        border-radius: .3rem;
+                    }
+                }
+            }
+            >nav{
+                display: flex;
+                height: .5rem;
+                background-color: #fff;
+                >div{
+                    padding: .1rem 0 .1rem .56rem;
+                    position: relative;
+                    &.nav-left{
+                        width: 46%;
+                        i{
+                            position: absolute;
+                            top: .02rem;
+                            left: .1rem;
+                            width: .41rem;
+                            height: .47rem;
+                            display: inline-block;
+                            background: url(http://m.3songshu.com/resources/images/icon-bag@2x.709b32f7.png) no-repeat center;
+                            background-size: 100% auto;
+                        }
+                    }
+                    &.nav-right{
+                        padding: .1rem 0 .1rem .6rem;
+                        width: 56%;
+                        background: center left/1px 100% no-repeat linear-gradient(90deg,#ddd,#ddd 50%,transparent 50%);
+                        i{
+                            position: absolute;
+                            top: .02rem;
+                            left: .1rem;
+                            width: .47rem;
+                            height: .47rem;
+                            display: inline-block;
+                            background: url(http://m.3songshu.com/resources/images/icon-change-list@2x.d419099a.png) no-repeat center;
+                            background-size: 100% auto;
+                        }
+                    }
+                    p{
+                        margin: .06rem 0 0 0;
+                        font-size: .15rem;
+                        line-height: 1em;
+                    }
+                    span{
+                        font-size: .11rem;
+                        line-height: 1em;
+                        color: #999;
+                    }
+                }
+            }
+            >section{
+                h3{
+                    &::before{
+                        width: .05rem;
+                        height: .2rem;
+                        margin-top: -.1rem;
+                    }
+                }
+                h4{
+                    width: 100%;
+                    height: .35rem;
+                    margin-bottom: .05rem;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .vip-items{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        li{
+            background-color: #fff;
+            width: 1.845rem;
+            margin-bottom: .06rem;
+            img{
+                height: 1.85rem;
+                width : 1.845rem;
+                margin-bottom: .05rem;
+            }
+            p{
+                padding: 0 .08rem;
+                line-height: 1.5em;
+                height: 1.5em;
+                font-size: .14rem;
+                color: #000;
+                overflow: hidden;
+                &.v-i-number{
+                    color: #999;
+                    font-size: .11rem;
+                    margin: -.03rem  0 .03rem;
+                }
+                &.v-i-price{
+                    color: #77bc1f;
+                    font-size: .15erm;
+                    
+                    >.price{
+                        position: relative;
+                        display: inline-block;
+                        padding-left: .17rem;
+                        i{
+                            background: url(http://m.3songshu.com/resources/images/icon-integral@2x.ba5969d3.png) no-repeat center;
+                            background-size: 100% auto;
+                            display: inline-block;
+                            width: .13rem;
+                            height: .13rem;
+                            position: absolute;
+                            left: .02rem;
+                            top: 50%;
+                            margin-top: -.065rem;
+                        }
+                    }
+                    .price-number{
+                        color: #ee2e52;
+                    }
+                }
+            }
+        }
+    }
+}

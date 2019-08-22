@@ -1,0 +1,357 @@
+#home{
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    >.swiper-container{
+        width: 100%;
+        height: 2.34rem;
+        overflow: hidden;
+        .swiper-wrapper >.swiper-slide > img{
+            width: 100%;
+            height: 2.34rem;
+        }
+        >.swiper-pagination-bullets{
+            height: 0.08rem;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 0.07rem ;
+            bottom: 0;
+            .swiper-pagination-bullet{
+                width: .09rem;
+                height: .02rem;
+                margin: 0.02rem;
+                border-radius: .01rem;
+                border: none;
+                z-index: 1;
+                background-color: rgba(236,236,236,.7);
+                &.swiper-pagination-bullet-active{
+                    background-color: #fff;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+    .home-main-wraper{
+        >div{
+
+            #adv{
+                background-color: #fff;
+                padding-top: .05rem;
+                img{
+                    width: 100%;
+                    height: 1.17rem;
+                }
+            }
+            >nav{
+                height: 1.64rem;
+                overflow: hidden;
+                ul{
+                    height: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    li{
+                        width: .825rem;
+                        height: .82rem;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    >li:nth-child(4n),>li:nth-child(1),>li:nth-child(5){
+                        width: 1.05rem;
+                    }
+                }
+            }
+            >.adv_two{
+                padding-top: .05rem;
+                height: 1.58rem;
+                display: flex;
+                li{
+                    flex: 1;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            >.special{
+                >.swiper-container2{
+                    background-color: #fff;
+                    width: 100%;
+                    height: 2.075rem;
+                    .swiper-wrapper{
+                        .swiper-slide{
+                            width: 2.7rem !important;
+                            height: 100%;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                            .activity-time{
+                                position: absolute;
+                                left: 50%;
+                                bottom: -.05rem;
+                                margin-left: -35%;
+                                width: 70%;
+                                height: 1.7em;
+                                line-height: 1.7em;
+                                text-align: center;
+                                background-color: #fff;
+                                border-radius: .1rem;
+                                box-shadow: 0 .01rem .01rem .01rem #ddd;
+                                opacity: 1;
+                                transition: opacity .3s;
+                            }
+                        }
+                    }
+                } 
+            }
+            .limited{
+                background-color: #fff;
+                margin-top:0.05rem;
+                position: relative;
+                height: 1.565rem;
+                background-image: url(http://m.3songshu.com/resources/images/icon-index-flash-sale@2x.1b7597b2.png);
+                background-position: .05rem .05rem;
+                background-repeat: no-repeat;
+                background-size: .59rem auto;
+                display: flex;
+                .seckill{
+                    width: 2.11rem;
+                    padding-top:.445rem;
+                    color: #262626;
+                    text-align: center;
+                    font-size: .15rem;
+                    .time-title{
+                        line-height: 1.5em;
+                        color: #ee2e52;
+                        >span{
+                            display: inline-block;
+                            padding-left: .2rem;
+                            background-image: url(http://m.3songshu.com/resources/images/icon-flash-sale@2x.b8fa8377.png);
+                            background-size: .19rem auto;
+                            background-position: left center;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                    .time-tips{
+                        font-size: .12rem;
+                        line-height: .24rem;
+                    }
+                    .time-count-down{
+                        font-size: .19rem;
+                        line-height: .22rem;
+                        font-weight: 700;
+                    }
+                }
+                >.swiper-container3{
+                    background-color: #fff;
+                    width: 1.64rem;
+                    height: 1.30rem;
+                    overflow: hidden;
+                    position: relative;
+                    .swiper-wrapper{
+                        height: 100%;
+                        .swiper-slide{
+                            .seckill-item{
+                                position: relative;
+                                height: 100%;
+                                padding-right: .36rem;
+                                margin-right: .1rem;
+                                text-align: left;
+                                img{
+                                    width: .879rem;
+                                    height: .879rem;
+                                    margin: 0 auto .05rem;
+                                    display: block;
+                                }
+                                .item-title{
+                                    font-size: .12rem;
+                                    height: 1.5em;
+                                    overflow: hidden;
+                                    color: #262626;
+        
+                                }
+                                .item-price{
+                                    margin: 0;
+                                    line-height: 1.2em;
+                                    color: #ee2e52;
+                                    span{
+                                        position: relative;
+                                        padding: 0 .03rem;
+                                        margin-left: .02rem;
+                                        font-size: .12rem;
+                                        color: #999;
+                                        &::before{
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 0;
+                                            right: 0;
+                                            height: .01rem;
+                                            background-color: #999;
+                                            content: '';
+                                        }    
+                                    }
+                                }
+                                .item-button{
+                                    position: absolute;
+                                    bottom: .02rem;
+                                    right: .06rem;
+                                    width: .24rem;
+                                    height: .24rem;
+                                    i{
+                                        width: 100%;
+                                        height: 100%;
+                                        display: inline-block;
+                                        background-position: center;
+                                        background-repeat: no-repeat;
+                                        background-image: url(http://m.3songshu.com/resources/images/icon-add-to-cart-green.cba1771f.png);
+                                        background-size: .24rem auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                >.swiper-pagination-bullets{
+                    position: absolute;
+                    width: 100%;
+                    height: 0.08rem;
+                    display: flex;
+                    justify-content: flex-end;
+                    padding-right: 0.07rem ;
+                    bottom: .1rem;
+                    .swiper-pagination-bullet{
+                        width: .09rem;
+                        height: .02rem;
+                        margin: 0 .02rem;
+                        border-radius: .01rem;
+                        border: none;
+                        background-color: rgba(236,236,236,.7);
+                        &.swiper-pagination-bullet-active{
+                            background-color: #c5c5c5;
+                        }
+                    }
+                }
+            }
+            .week-top{
+               .week-wrapper{
+                   width: 100%;
+                   display: flex;
+                   flex-direction: column;
+                    .week-item{
+                        width: 100%;
+                        height: 1.172rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img{
+                            width: 100%;
+                            height: 100%;
+    
+                            &.lazyload{
+                                width: .18rem !important;
+                                height: .18rem !important;
+                            }
+                        }
+                    }
+               }
+            }
+            .yesterday-top{
+                .yesterday-wrapper{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    >div{
+                        width: 1.845rem;
+                        margin-bottom: .06rem; 
+                    }
+                }
+            }
+            .hot-pro{
+                .hot-wrapper{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    >div{
+                        width: 1.845rem;
+                        margin-bottom: .06rem; 
+                        &.product{
+                            .discuss{
+                                margin: .05rem 0 .05rem;
+                                padding: .05rem .08rem 0;
+                                font-size: .12rem;
+                                color: #777;
+                                line-height: .23rem;
+                                border-top: none;
+                                background: top center/100% 1px no-repeat linear-gradient(180deg,#ddd,#ddd 50%,transparent 50%);
+                                .dis-tit{
+                                    color: #77bc1f;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #load{
+                width: 100%;
+                height: .44rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                >img{
+                    width: .18rem;
+                    height: .18rem;
+                }
+            }
+        }
+    }
+}
+
+#recommend{
+    height: .4rem;
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    >nav{
+        height: 100%;
+        overflow: hidden;
+        ul{
+            display: flex;
+            li{
+                padding: 0 .09rem;
+                height: .4rem;
+                line-height: .4rem;
+                font-size: .12rem;
+                color: #262626;
+                text-align: center;
+                position: relative;
+                flex-shrink: 0;
+                img{
+                    position: absolute;
+                    display: inline-block;
+                    width: .15rem;
+                    height: auto;
+                    top: .04rem;
+                    right: .03rem;
+                }
+                div{
+                    display: inline-block;
+                    position: relative;
+                }
+                &.active{
+                    color: #77bc1f;
+                    div::after{
+                        position: absolute;
+                        bottom: 0;
+                        left: -.02rem;
+                        right: -0.02rem;
+                        height: .02rem;
+                        background-color: #77bc1f;
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+}

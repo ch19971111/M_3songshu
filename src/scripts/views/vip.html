@@ -1,0 +1,63 @@
+<div class="vip">
+    <header>
+        <div>松鼠币商城</div>
+    </header>
+    <div class="better-scroll">
+        <div class="vip-container">
+            <div class="user-content">
+                <div class="user-title">
+                    <span class="user-t-txt">我的松鼠币</span>
+                    <span class="user-number">0</span>
+                </div>
+                <div class="login-box">
+                    <p>松鼠好礼等你拿~</p>
+                    <button class="button">登录/注册</button>
+                </div>
+            </div>
+            <nav>
+                <div class="nav-left">
+                    <i></i>
+                    <p>购物袋</p>
+                    <span>想要的都在这儿</span>
+                </div>
+                <div class="nav-right">
+                    <i></i>
+                    <p>我的兑换</p>
+                    <span>查看松鼠币兑换订单</span>
+                </div>
+            </nav>
+            <section>
+                <h3>兑换中心1</h3>
+                <ul class="vip-items">
+                    {{each data[0].products}}
+                    <li>
+                        <img src="{{$value.pic}}" alt="">
+                        <p>{{$value.name}}</p>
+                        <p class="v-i-number">每人限兑 {{$value.limit}} 件</p>
+                        <p class="v-i-price">
+                            <span class="price"><i></i>{{$value.integralAmout}}</span>
+                        </p>
+                    </li>
+                    {{/each}}
+                </ul>
+            </section>
+            <section>
+                <h4><img src="http://pic10.cdn.3songshu.com:81//assets/upload/adv/59946be4ef6fec8bfd0e072e2c5f364b.jpg" alt=""></h4>
+                <ul class="vip-items">
+                    {{each data[1].products}}
+                    <li>
+                        <img src="{{$value.pic}}" alt="">
+                        <p>{{$value.name}}</p>
+                        <p class="v-i-number">数量有限，兑完为止</p>
+                        <p class="v-i-price">
+                            <span class="price-number txt">{{$value.price}}</span>
+                            <span class="price-number">+</span>
+                            <span class="price"><i></i>{{$value.integralAmout}}</span>
+                        </p>
+                    </li>
+                    {{/each}}
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>

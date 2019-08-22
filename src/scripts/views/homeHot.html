@@ -1,0 +1,24 @@
+<h3>大家正在热评的零食</h3>
+        <div class="hot-wrapper">
+            {{each data}}
+            <div class="product">
+                <div class="pro-img">
+                    <img src="http://m.3songshu.com/resources/images/wait@2x.da4dab68.png" alt="" class="lazyload" data-url="{{$value.pic}}">
+                    <img src="{{ if $value.tags.length == 0}}  {{else}} {{$value.tags[0].pic}} {{/if}}" alt="" class="img-item">
+                </div>
+                <p class="pro-txt">{{$value.alias}}</p>
+                <p class="pro-title">{{$value.name}}</p>
+                <p class="pro-price">
+                    <span>{{$value.salesPrice}}0</span>
+                    <span class="old-price">{{$value.marketPrice}}.00</span>
+                    <span class="pro-cart">
+                        <i></i>
+                    </span>
+                </p>
+                <div class="discuss">
+                    <span class="dis-tit">主人说:</span>
+                    {{$value.remarks}}
+                </div>
+            </div>
+            {{/each}}
+        </div>

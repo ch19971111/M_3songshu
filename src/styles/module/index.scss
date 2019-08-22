@@ -1,0 +1,79 @@
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    >main{
+        flex: 1;
+        overflow:hidden;
+    }
+    >footer{
+        height: .49rem;
+        nav{
+            height: 100%;
+            ul{
+                height: 100%;
+                display: flex;
+                li{
+                    flex: 1;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: .10rem;
+                    color: #585858;
+                    background-color: #fff;
+                    &.active{
+                        color: #77bc1f;
+                    }
+                    i{
+                        height: .32rem;
+                        width: 100%;
+                        background-repeat: no-repeat !important;
+                        background-position: center !important;
+                    }
+                    &.home i{
+                        background-image: url(http://m.3songshu.com/resources/images/icon-home@2x.7a254bff.png);
+                        background-size: .21rem auto;
+                    }
+                    &.home.active i{
+                        background-image: url(http://m.3songshu.com/resources/images/icon-home-active@2x.fdcce70a.png);
+                        background-size: .21rem auto;
+                    }
+                    &.classify i{
+                        background-image: url(http://m.3songshu.com/resources/images/icon-classify@2x.534fd4d1.png);
+                        background-size: .18rem auto;
+                    }
+                    &.classify.active i{
+                        background-image: url(http://m.3songshu.com/resources/images/icon-classify-active@2x.e357b1e3.png);
+                        background-size: .18rem auto;
+                    }
+                    &.shopping i{
+                        background-image: url(http://m.3songshu.com/resources/images/icon-privilege@2x.a56a9709.png);
+                        background-size: .20rem auto;
+                    }
+                    &.shopping.active i{
+                        background-image: url(http://m.3songshu.com/resources/images/icon-privilege-active@2x.42428eaa.png);
+                        background-size: .20rem auto;
+                    }
+                    &.cart i{
+                        background-image: url(http://m.3songshu.com/resources/images/icon-cart@2x.2ab995f2.png);
+                        background-size: .20rem auto;
+                    }
+                    &.cart.active i{
+                        background-image: url(http://m.3songshu.com/resources/images/icon-cart-active@2x.a8df4534.png);
+                        background-size: .20rem auto;
+                    }
+                    &.profile i{
+                        background-image: url(http://m.3songshu.com/resources/images/icon-profile@2x.bad16eb6.png);
+                        background-size: .20rem auto;
+                    }
+                    &.profile.active i{
+                        background-image: url(http://m.3songshu.com/resources/images/icon-profile-active@2x.90c8d715.png);
+                        background-size: .20rem auto;
+                    }
+                }
+            }
+        }   
+    }
+}

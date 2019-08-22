@@ -1,0 +1,131 @@
+@font-face{
+    font-family: yofont;
+    src: url(/assets/icons/iconfont.woff) format("woff"),
+        url(/assets/icons/iconfont.ttf) format("truetype")
+}
+@font-face{
+    font-family: yofont;
+    src: url(/assets/icons/iconfont-tip.woff) format("woff"),
+        url(/assets/icons/iconfont-tip.ttf) format("truetype")
+}
+#layz{
+    width: 100%;
+    height: 100%;
+}
+section{
+    padding-top: .05rem;
+    font-size: .12rem;
+    h3{
+        padding: .1rem .1rem .1rem .18rem;
+        color: #262626;
+        font-size: .11rem;
+        line-height: 1em;
+        position: relative;
+        &::before{
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-top: -.05rem;
+            width: .12rem;
+            height: .1rem;
+            background-color: #77bc1f;
+            content: ' ';
+        }
+    }
+}
+.product{
+    width: 1.845rem;
+    margin-bottom: .06rem; 
+    background: #fff;
+    .pro-img{
+        width: 100%;
+        height: 1.845rem;
+        padding-bottom: .05rem;
+        position: relative;
+        img{
+            width: 100%;
+        }
+        .img-item{
+            width: 25%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    >p{
+        padding: 0 .08rem;
+        overflow: hidden;
+        &.pro-txt{
+            margin: 0;
+            height: .21rem;
+            line-height: .21rem;
+            font-size: .14rem;
+            color: #000;
+        }
+        &.pro-title{
+            height: .18rem;
+            line-height: .18rem;
+            font-size: .12rem;
+            color: #777;
+        }
+        &.pro-price{
+            position: relative;
+            line-height: .23rem;
+            font-size: .15rem;
+            color: #ee2e52;
+            overflow: visible;
+            .old-price{
+                margin-right: .04rem;
+                vertical-align: baseline;
+                position: relative;
+                color: #999;
+                font-size: .12rem;
+                &::before{
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    height: .01rem;
+                    background-color: #999;
+                    content: '';
+                }
+            }
+            .pro-cart{
+                position: absolute;
+                right: .08rem;
+                top: 50%;
+                margin-top: -.12rem;
+                padding: 0;
+                width: .24rem;
+                height: .24rem;
+                min-width: .24rem;
+                min-height: .24rem;
+                border: none;
+                border-radius: .04rem;
+                font-size: .16rem;
+                line-height: .35rem;
+                cursor: pointer;
+                i{
+                    width: 100%;
+                    height: 100%;
+                    display: inline-block;
+                    background-image: url(http://m.3songshu.com/resources/images/icon-add-to-cart-green.cba1771f.png);
+                    background-size: .24rem auto;
+                    background-repeat: no-repeat;
+                }
+                &::after{
+                    position: absolute;
+                    top: -.06rem;
+                    right: -.06rem;
+                    bottom: -.06rem;
+                    left: -.06rem;
+                    content: ' ';
+                }
+            }
+        }
+    }
+}
+body{
+    position: relative;
+}

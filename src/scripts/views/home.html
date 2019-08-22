@@ -1,0 +1,174 @@
+<div id="home">
+    <div class="swiper-container swiper-container1">
+        <div class="swiper-wrapper">
+            {{each datas.carousel}}
+            <div class="swiper-slide">
+                <img src="{{$value.pic}}" alt="">
+            </div>
+            {{/each}}
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <script>
+        new Swiper('.swiper-container1',{
+                autoplay: {
+                    disableOnInteraction: false,
+                },
+                loop    : true,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            })
+    </script>
+    <div id="recommend">
+        <nav id="nav-scroll">
+                <ul>
+                    {{each datas.channels}}
+                    <li data-id = "{{$value.id}}">
+                        <img src="{{$value.pic}}" alt="">
+                        <div>{{$value.name}}</div>
+                    </li>
+                    {{/each}}
+                </ul>
+        </nav>
+    </div>
+    <div class="home-main-wraper">
+        <div  class="sign" data-sign="{{datas.channels[0].id}}">
+
+            <div id="adv">
+                {{each datas.recommendChannel.topAdvs}}
+                <img src="{{$value.pic}}" alt="">
+                {{/each}}
+            </div>
+            <nav class="navlist">
+                <ul>
+                    {{each datas.recommendChannel.middleAdvs}}
+                    <li>
+                        <img src="{{$value.pic}}" alt="">
+                    </li>
+                    {{/each}}
+                </ul>
+            </nav>
+            <ul class="adv_two">
+                {{each datas.recommendChannel.recommendAdvs}}
+                <li>
+                    <img src="{{$value.pic}}" alt="">
+                </li>
+                {{/each}}
+            </ul>
+            <section class="special">
+                <h3>特价专场</h3>
+                <div class="swiper-container swiper-container2">
+                    <div class="swiper-wrapper">
+                        {{each datas.recommendChannel.recommendActivitys.items}}
+                        <div class="swiper-slide">
+                            <img src="{{$value.pic}}" alt="">
+                            <div class="activity-time timedown" data-endtime="{{$value.endTime}}">
+                                仅剩1天12小时00分00秒
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </section>
+            <script>
+                new Swiper('.swiper-container2',{
+                    initialSlide :1,
+                    slidesPerView: 'auto',
+                    centeredSlides: true,
+                    spaceBetween  : 30,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    }
+                })
+            </script>
+            <div class="limited">
+                <div class="seckill">
+                    <p class="time-title">
+                        <span>秒杀</span>
+                    </p>
+                    <p class="time-tips">距离秒杀结束</p>
+                    <div class="time-count-down timedown" data-endtime = " {{datas.recommendChannel.flashSale.endTime}} " >
+                        <span>04</span>
+                        <span>:</span>
+                        <span>00</span>
+                        <span>:</span>
+                        <span>00</span>
+                    </div>
+                </div>
+                <div class="swiper-container3">
+                    <div class="swiper-wrapper">
+                        {{each datas.recommendChannel.flashSale.products}}
+                        <div class="swiper-slide">
+                            <div class="seckill-item">
+                                <img src="{{$value.pic}}" alt="">
+                                <p class="item-title">{{$value.name}}</p>
+                                <p class="item-price">
+                                    {{$value.salesPrice}}
+                                    <span>{{$value.marketPrice}}</span>
+                                </p>
+                                <div class="item-button">
+                                    <i></i>
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <script>
+                new Swiper('.swiper-container3',{
+                    autoplay: {
+                        disableOnInteraction: false,
+                    },
+                    loop    : true,
+                    pagination: {
+                        el: '.swiper-pagination',
+                    }
+                })
+            </script>
+            <section class="week-top">
+                <h3>
+                    本周卖得最好的10款零食
+                </h3>
+                <div class="week-wrapper">
+                    {{each datas.recommendChannel.promotions}}
+                    <div class="week-item">
+                        <img src="http://m.3songshu.com/resources/images/wait.751f56f1.gif" alt="" class="lazyload" data-url="{{$value.pic}}"> 
+                    </div>
+                    {{/each}}
+                </div>
+            </section>
+            <section class="yesterday-top">
+                <h3>昨日卖的最好的20款商品</h3>
+                <div class="yesterday-wrapper">
+                    {{each datas.recommendChannel.floors['0'].products}}
+                    <div class="product">
+                        <div class="pro-img">
+                            <img src="http://m.3songshu.com/resources/images/wait@2x.da4dab68.png" alt="" data-url="{{$value.pic}}" class="lazyload">
+                            <img src="{{ if $value.tags.length == 0}} # {{else}} {{$value.tags[0].pic}} {{/if}}" alt="" class="img-item">
+                        </div>
+                        <p class="pro-txt">{{$value.alias}}</p>
+                        <p class="pro-title">{{$value.name}}</p>
+                        <p class="pro-price">
+                            <span>{{$value.salesPrice}}0</span>
+                            <span class="old-price">{{$value.marketPrice}}.00</span>
+                            <span class="pro-cart">
+                                <i></i>
+                            </span>
+                        </p>
+                    </div>
+                    {{/each}}
+                </div>
+            </section>
+            <section class="hot-pro">
+            </section>
+            <div id="load">
+                <img src="../../assets/images/ajax-loader.gif" alt="">
+                <span>上拉加载更多</span>
+            </div>
+        </div>
+    </div>
+</div>

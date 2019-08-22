@@ -1,0 +1,27 @@
+    <div id="adv">                                
+        <img src="{{data.data.banner.pic}}" alt="">                            
+    </div>
+    {{each data.data.floors}}
+    <section class="yesterday-top">
+            <h3>{{$value.title}}</h3>
+            <div class="yesterday-wrapper">
+                {{each $value.products}}
+                <div class="product">
+                    <div class="pro-img">
+                        <img src="{{$value.pic}}" alt="">
+                        <img src="{{ if $value.tags.length == 0}} # {{else}} {{$value.tags[0].pic}} {{/if}}" alt="" class="img-item">
+                    </div>
+                    <p class="pro-txt">{{$value.alias}}</p>
+                    <p class="pro-title">{{$value.name}}</p>
+                    <p class="pro-price">
+                        <span>{{$value.salesPrice}}0</span>
+                        <span class="old-price">{{$value.marketPrice}}.00</span>
+                        <span class="pro-cart">
+                            <i></i>
+                        </span>
+                    </p>
+                </div>
+                {{/each}}
+            </div>
+    </section>
+    {{/each}}

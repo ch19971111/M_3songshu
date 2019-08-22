@@ -1,0 +1,13 @@
+@import "./yo/usage/core/reset.scss";
+@import "./module/common.scss";
+@import "./module/index.scss";
+@import "./module/home.scss";
+@import "./module/sort.scss";
+@import "./module/vip.scss";
+@import "./module/cart.scss";
+@import "./module/profile.scss";
+
+#root{
+    height: 100%;
+    background-color: #fff;
+}

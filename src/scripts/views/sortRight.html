@@ -1,0 +1,12 @@
+<ul>
+    {{each datas.subNavigations}}
+    <li class="sort-item">
+        <div class="sort-item-img">
+            <img src="{{$value.pic}}" alt="">
+        </div>
+        <div class="sort-item-title">
+            <span>{{$value.name}}</span>
+        </div>
+    </li>
+    {{/each}}
+</ul>
