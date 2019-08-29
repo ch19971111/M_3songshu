@@ -6,6 +6,7 @@ import countDown from '../controller/HomeCountDown';
 import Http from '../model/Http';
 import BScroll from 'better-scroll';
 import lazyLoad from '../model/LazyLoad'
+// Http.getdatas()
 class HomeController{
     constructor(){}
     async render(){

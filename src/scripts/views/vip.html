@@ -44,15 +44,15 @@
             <section>
                 <h4><img src="http://pic10.cdn.3songshu.com:81//assets/upload/adv/59946be4ef6fec8bfd0e072e2c5f364b.jpg" alt=""></h4>
                 <ul class="vip-items">
-                    {{each data[1].products}}
+                    {{each vipdata}}
                     <li>
-                        <img src="{{$value.pic}}" alt="">
-                        <p>{{$value.name}}</p>
-                        <p class="v-i-number">数量有限，兑完为止</p>
+                        <img src=" http://localhost:3000/images/{{$value.companyLogo}}" alt="">
+                        <p>{{$value.companyName}}</p>
+                        <p class="v-i-number">{{$value.positionName}}</p>
                         <p class="v-i-price">
-                            <span class="price-number txt">{{$value.price}}</span>
+                            <span class="price-number txt">{{$value.city}}</span>
                             <span class="price-number">+</span>
-                            <span class="price"><i></i>{{$value.integralAmout}}</span>
+                            <span class="price"><i></i>{{$value.salary}}</span>
                         </p>
                     </li>
                     {{/each}}

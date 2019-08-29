@@ -1,0 +1,120 @@
+#signin-box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    .top{
+        height: .44rem;
+        padding: 5px 10px;
+        display: flex;
+        color: #000;
+        background-color: #fff;
+        .back-home{
+            font-size: .25rem;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .signi-title{
+            flex: 1;
+            height: 100%;
+            padding: 0 10px;
+            font-weight: 500;
+            line-height: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: .17rem;
+        }
+        .top-right{
+            height: 100%;
+            width: .25rem;
+        }
+    }
+    .wrapper{
+        flex: 1;
+        .signin-form{
+            .login-img{
+                height: 1rem;
+                background: url(http://m.3songshu.com/resources/images/login-pwd-blur.5f488ea3.png) no-repeat center center;
+                background-size: 100% auto;
+                &.active{
+                    background: url(http://m.3songshu.com/resources/images/login-pwd-focus.6ed81267.png) no-repeat center center;
+                    background-size: 100% auto;
+                }
+            }
+            .signin-main{
+                background-color: #fff;
+                padding: 0 .1rem;
+                margin-bottom: .1rem;
+                p{
+                    padding: .1rem 0;
+                    height: .44rem;
+                    @include border( 0 0 1px 0 );
+                    display: flex;
+                    i{
+                        width: 30px;
+                        display: inline-block;
+                        height: .24rem;
+                        margin-right:.1rem; 
+                        &.icon-user{
+                            background-image: url(http://m.3songshu.com/resources/images/icon-username@2x.e334a0d2.png);
+                            background-size: 14px auto;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+                        &.icon-password{
+                            background-image: url(http://m.3songshu.com/resources/images/icon-password@2x.6a424894.png);
+                            background-size: 14px auto;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                    span{
+                        flex: 1;
+                        input{
+                            padding: 0;
+                            width: 100%;
+                            height: 100%;
+                            line-height: inherit;
+                            color: #999;
+                            background-color: transparent;
+                            font-size: 15px;
+                            outline-offset: 0;
+                            outline-style: none;
+                            outline-width: 0;
+                            border: none;
+                        }
+                    }
+                }
+            }
+            .sign-btn{
+                margin: 0 10px;
+                padding-top: 5px;
+                &.active{
+                    button{
+                        background: #77bc1f;
+                    }
+                }
+                button{
+                    padding: 10px;
+                    font-size: 16px;
+                    border: none;
+                    width: 100%;
+                    border-radius: 4px;
+                    color: #fff;
+                }
+            }
+            .signin-option{
+                
+                height: .18rem;
+                margin: 0.1rem .1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+}

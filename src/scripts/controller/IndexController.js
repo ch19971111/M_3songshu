@@ -4,7 +4,7 @@ import SortController from "./SortController"
 import VipController from  "./VipController"
 import CartController from "./CartController"
 import ProfileController from "./ProfileController"
-
+import signinController  from './SigninController'
 
 
 
@@ -18,7 +18,8 @@ class IndexController{
             sort   : SortController,
             vip    : VipController,
             cart   : CartController,
-            profile: ProfileController
+            profile: ProfileController,
+            signin   : signinController,
         }
     }
     render(){
@@ -27,14 +28,57 @@ class IndexController{
     bindHashChange(){
         $(window).on('hashchange',()=>{
             let hash = location.hash && location.hash.substr(1) || 'home'
-            this.setTabbarActive(hash)
-            this.renderMain(this.components[hash])
+            if(hash == 'cart' || hash == 'profile' || hash == 'signin'){
+               let token = localStorage.getItem('x-access-token')
+              $.ajax({
+                    url:'/submit/api/users/isSignin',
+                    headers:{
+                        'x-access-token':token
+                    },
+                    success:$.proxy(function(result){
+                        if(result.ret){
+                            this.setTabbarActive(hash)
+                            this.renderMain(this.components[hash])
+                        }else{
+                            $('.container footer').css('display','none')
+                            location.hash = 'signin'
+                            this.renderMain(this.components[hash])
+                        }
+                    },this)
+                })
+            }else{
+                $('.container footer').css('display','block')
+                this.setTabbarActive(hash)
+                this.renderMain(this.components[hash])
+            }
+
         })
         $(window).on('load',()=>{
             let hash = location.hash && location.hash.substr(1) || "home"
             location.hash = hash  ;
-            this.setTabbarActive(hash)
-            this.renderMain(this.components[hash])
+            if(hash == 'cart' || hash == 'profile' || hash == 'signin'){
+                let token = localStorage.getItem('x-access-token')
+               $.ajax({
+                     url:'/submit/api/users/isSignin',
+                     headers:{
+                         'x-access-token':token
+                     },
+                     success:$.proxy(function(result){
+                         if(result.ret){
+                             this.setTabbarActive(hash)
+                             this.renderMain(this.components[hash])
+                         }else{
+                             $('.container footer').css('display','none')
+                             location.hash = 'signin'
+                             this.renderMain(this.components[hash])
+                         }
+                     },this)
+                 })
+             }else{
+                 $('.container footer').css('display','block')
+                 this.setTabbarActive(hash)
+                 this.renderMain(this.components[hash])
+             }
         })
     }
     renderMain(controller){

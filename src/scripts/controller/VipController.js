@@ -5,8 +5,10 @@ import BScroll from 'better-scroll'
 class VipController{
     constructor(){}
     async render(){
+        let vipdata = (await Http.getVipShop())
+        // console.log(vipdata)
         let data = (await Http.getdata("/sapi/mobile/api/integral/index/info")).data.floors
-        let html = template.render(vipTpl,{data})
+        let html = template.render(vipTpl,{data,vipdata:vipdata.data.list})
         $("main").html(html);
         let nums = $(".txt")
         $.each(nums,(index,item)=>{

@@ -72,7 +72,7 @@ function webSrever(){
                     }
                 }),
                 proxy('/submit',{
-                    target : 'http://localhost:3000/api/user/isSignin',
+                    target : 'http://localhost:3000',
                     changeOrigin : true,
                     pathRewrite:{
                         "^/submit":''

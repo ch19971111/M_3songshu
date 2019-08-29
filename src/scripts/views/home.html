@@ -83,6 +83,7 @@
                     }
                 })
             </script>
+            {{ if datas.recommendChannel.flashSale}}
             <div class="limited">
                 <div class="seckill">
                     <p class="time-title">
@@ -118,6 +119,7 @@
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
+      
             <script>
                 new Swiper('.swiper-container3',{
                     autoplay: {
@@ -129,6 +131,7 @@
                     }
                 })
             </script>
+            {{/if}}
             <section class="week-top">
                 <h3>
                     本周卖得最好的10款零食
